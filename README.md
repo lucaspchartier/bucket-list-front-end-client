@@ -9,7 +9,7 @@ Once a user signs up and signs in, the user is able to create a bucket list item
 - Deployed API: https://morning-tor-51744.herokuapp.com
 
 ### Wireframes
-* [Wireframes](https://i.imgur.com/7THkF3o.jpg)
+![Wireframes](https://i.imgur.com/7THkF3o.jpg)
 
 ### List of technologies used
 * HTML
