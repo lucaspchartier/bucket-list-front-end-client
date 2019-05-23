@@ -2,9 +2,9 @@
 
 const store = require('../store.js')
 
-const failure = function (FailureResponse) {
+const failure = function (failureResponse) {
   $('.message-box').show(100)
-  $('.message-box').html('Something Went Wrong, Try Again')
+  $('.message-box').html('Something went wrong, please try again.')
   $('.message-box').removeClass('success-message')
   $('.message-box').addClass('error-message')
   setTimeout(function () {
@@ -12,9 +12,9 @@ const failure = function (FailureResponse) {
   }, 3000)
 }
 
-const passDoesntMatch = function (FailureResponse) {
+const passDoesntMatch = function (failureResponse) {
   $('.message-box').show(100)
-  $('.message-box').html('Passwords Does Not Match')
+  $('.message-box').html('Passwords do not match.')
   $('.message-box').removeClass('success-message')
   $('.message-box').addClass('error-message')
   setTimeout(function () {
@@ -22,9 +22,9 @@ const passDoesntMatch = function (FailureResponse) {
   }, 5000)
 }
 
-const signInFailure = function (FailureResponse) {
+const signInFailure = function (failureResponse) {
   $('.message-box').show(100)
-  $('.message-box').html('Email And Password Does Not Match, or Account Does Not Exist')
+  $('.message-box').html('Email and password do not match, or account doesn\'t exist.')
   $('.message-box').removeClass('success-message')
   $('.message-box').addClass('error-message')
   setTimeout(function () {
@@ -34,7 +34,7 @@ const signInFailure = function (FailureResponse) {
 
 const changePassFailure = function () {
   $('.message-box').show(100)
-  $('.message-box').html('New Password Cannot Match Old Password')
+  $('.message-box').html('New password cannot match old password.')
   $('.message-box').removeClass('success-message')
   $('.message-box').addClass('error-message')
   setTimeout(function () {
@@ -44,7 +44,7 @@ const changePassFailure = function () {
 
 const signUpSuccess = function (signUpResponse) {
   $('.message-box').show(100)
-  $('.message-box').html('You Signed Up Successfully')
+  $('.message-box').html('You\'ve signed up successfully!')
   $('.sign-up-form').slideUp(200)
   $('.message-box').removeClass('error-message')
   $('.message-box').addClass('success-message')
@@ -58,7 +58,7 @@ const signInSuccess = function (signInResponse) {
   $('.logo').hide()
   $('.message-box').show(100)
   $('.user-name').html(`${signInResponse.user.email}'s Life and Dreams`)
-  $('.message-box').html('You Signed In Successfully')
+  $('.message-box').html('You\'ve logged in successfully!')
   $('.message-box').removeClass('error-message')
   $('.message-box').addClass('success-message')
   $('.upload-section').addClass('block')
@@ -80,7 +80,7 @@ const signInSuccess = function (signInResponse) {
 
 const changePasswordSuccess = function (changePasswordResponse) {
   $('.message-box').show(100)
-  $('.message-box').html('You Changed Password Successfully')
+  $('.message-box').html('You\'ve changed your password successfully!')
   $('.message-box').removeClass('error-message')
   $('.message-box').addClass('success-message')
   $('#change-password-form').slideUp(500)
@@ -90,9 +90,9 @@ const changePasswordSuccess = function (changePasswordResponse) {
 }
 
 const signOutSuccess = function () {
-  $('.logo').fadeIn(200)
+  $('.logo').show()
   $('.message-box').show(100)
-  $('.message-box').html('You Signed Out Successfully')
+  $('.message-box').html('You\'ve logged out successfully!')
   $('.message-box').removeClass('error-message')
   $('.message-box').addClass('success-message')
   $('.user-name').empty()

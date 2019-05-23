@@ -1,10 +1,9 @@
-//
 const handle = require('../templates/helpers/index.handlebars')
 // const store = require('../store.js')
 
-const failure = function (FailureResponse) {
+const failure = function (failureResponse) {
   $('.upload-message-box').show(100)
-  $('.upload-message-box').html('Failed, Try Again')
+  $('.upload-message-box').html('Failed, please try again.')
   $('.upload-message-box').removeClass('success-message')
   $('.upload-message-box').addClass('error-message')
   setTimeout(function () {
@@ -12,9 +11,9 @@ const failure = function (FailureResponse) {
   }, 3000)
 }
 
-const idFailure = function (FailureResponse) {
+const idFailure = function (failureResponse) {
   $('.upload-message-box').show(100)
-  $('.upload-message-box').html('This ID does not exist')
+  $('.upload-message-box').html('This ID does not exist.')
   $('.upload-message-box').removeClass('success-message')
   $('.upload-message-box').addClass('error-message')
   setTimeout(function () {
@@ -24,7 +23,7 @@ const idFailure = function (FailureResponse) {
 
 const uploadSuccess = function (signUpResponse) {
   $('.upload-message-box').show(100)
-  $('.upload-message-box').html(`Item Successfully Added`)
+  $('.upload-message-box').html('Item added successfully!')
   $('.upload-message-box').removeClass('error-message')
   $('.upload-message-box').addClass('success-message')
   setTimeout(function () {
@@ -34,7 +33,7 @@ const uploadSuccess = function (signUpResponse) {
 
 const deleteSuccess = function (deleteResponse) {
   $('.upload-message-box').show(100)
-  $('.upload-message-box').html(`Item Successfully Deleted`)
+  $('.upload-message-box').html('Item deleted successfully!')
   $('.upload-message-box').removeClass('error-message')
   $('.upload-message-box').addClass('success-message')
   setTimeout(function () {
@@ -46,7 +45,7 @@ const getAllItemsSuccess = function (getItemSuccess) {
   $('.item-wall').empty()
   if (getItemSuccess.items.length === 0) {
     $('.upload-message-box').show(100)
-    $('.upload-message-box').html(`Your Account Has No More Dreams`)
+    $('.upload-message-box').html('Your account currently has no dreams.')
     $('.upload-message-box').addClass('error-message')
     $('.upload-message-box').removeClass('success-message')
     setTimeout(function () {
