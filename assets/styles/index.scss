@@ -7,6 +7,10 @@
 }
 
 body {
+  background-position: center;
+  background-size: 40%;
+  background-repeat: no-repeat;
+  background-attachment: fixed;
   background-color: #bfb5b2;
 }
 .hidden {
@@ -104,13 +108,16 @@ textarea:focus {
     color: white;
     text-align: center;
     text-decoration: none;
+    margin: 0 5px 0 5px;
   }
 
 .sign-in-btn,
 .sign-up-btn,
 .sign-out-btn,
 .chg-pass-btn,
-.get-all-item-btn {
+.get-all-item-btn,
+.get-completed-item-btn,
+.get-incomplete-item-btn {
   border-color: $button-blue;
   color: $button-blue;
 }
@@ -122,7 +129,9 @@ textarea:focus {
 .delete-image-form,
 .sign-in-form,
 .sign-up-form,
-.change-password-form {
+.change-password-form,
+.get-completed-item-btn,
+.get-incomplete-item-btn {
   display: none;
 }
 
@@ -181,15 +190,22 @@ textarea:focus {
     margin-bottom: 5px;
   }
 
-  .item-update-btn,
-  .item-remove-btn,
-  .item-complete-btn {
-    margin: 0 5px 0 5px;
-  }
-
   .upload-message-box {
     width: 100%;
     position: relative;
     text-align: center;
     margin: 0 auto;
+  }
+
+  .logo {
+    width: 100%;
+    text-align: center;
+    margin: 0 auto;
+  }
+
+  .bucket-logo {
+    text-align: center;
+    margin: 0 auto;
+    width: 650px;
+    height: 650px;
   }
