@@ -89,6 +89,7 @@ const changePasswordSuccess = function (changePasswordResponse) {
 }
 
 const signOutSuccess = function () {
+  $('.logo').show()
   $('.message-box').show(100)
   $('.message-box').html('You\'ve logged out successfully!')
   $('.message-box').removeClass('error-message')
