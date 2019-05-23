@@ -20,6 +20,7 @@ const signIn = function (inputData) {
     data: JSON.stringify(inputData)
   })
 }
+
 const changePassword = function (inputData) {
   return $.ajax({
     url: config.apiUrl + '/change-password',

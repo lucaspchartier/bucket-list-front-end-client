@@ -40,6 +40,7 @@ const textUpdate = function (_id, text) {
       })
   })
 }
+
 const titleUpdate = function (_id, title) {
   return $.ajax({
     method: 'PATCH',
