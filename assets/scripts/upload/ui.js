@@ -1,4 +1,3 @@
-//
 const handle = require('../templates/helpers/index.handlebars')
 // const store = require('../store.js')
 
