@@ -22,17 +22,7 @@ const passDoesntMatch = function (failureResponse) {
   }, 5000)
 }
 
-const signInFailure = function (failureResponse) {
-  $('.message-box').show(100)
-  $('.message-box').html('Email and password do not match, or account doesn\'t exist.')
-  $('.message-box').removeClass('success-message')
-  $('.message-box').addClass('error-message')
-  setTimeout(function () {
-    $('.message-box').fadeOut(200).empty()
-  }, 3000)
-}
-
-const changePassFailure = function () {
+const changePassFailure = function (failureResponse) {
   $('.message-box').show(100)
   $('.message-box').html('New password cannot match old password.')
   $('.message-box').removeClass('success-message')
@@ -114,6 +104,16 @@ const signOutSuccess = function () {
   }, 3000)
 }
 
+// const signInFailure = function (failureResponse) {
+//   $('.message-box').show(100)
+//   $('.message-box').html('Email and password do not match, or account doesn\'t exist.')
+//   $('.message-box').removeClass('success-message')
+//   $('.message-box').addClass('error-message')
+//   setTimeout(function () {
+//     $('.message-box').fadeOut(200).empty()
+//   }, 3000)
+// }
+
 module.exports = {
   failure,
   signUpSuccess,
@@ -121,6 +121,6 @@ module.exports = {
   changePasswordSuccess,
   signOutSuccess,
   changePassFailure,
-  signInFailure,
   passDoesntMatch
+  // signInFailure
 }
