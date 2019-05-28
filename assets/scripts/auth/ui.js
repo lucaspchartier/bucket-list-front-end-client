@@ -2,6 +2,17 @@
 
 const store = require('../store.js')
 
+const signUpSuccess = function (signUpResponse) {
+  $('.message-box').show(100)
+  $('.message-box').html('You\'ve signed up successfully!')
+  $('.sign-up-form').slideUp(200)
+  $('.message-box').removeClass('error-message')
+  $('.message-box').addClass('success-message')
+  setTimeout(function () {
+    $('.message-box').fadeOut(200).empty()
+  }, 3000)
+}
+
 const failure = function (failureResponse) {
   $('.message-box').show(100)
   $('.message-box').html('Something went wrong, please try again.')
@@ -12,7 +23,7 @@ const failure = function (failureResponse) {
   }, 3000)
 }
 
-const passDoesntMatch = function (failureResponse) {
+const passwordsDontMatch = function (failureResponse) {
   $('.message-box').show(100)
   $('.message-box').html('Passwords do not match.')
   $('.message-box').removeClass('success-message')
@@ -20,27 +31,6 @@ const passDoesntMatch = function (failureResponse) {
   setTimeout(function () {
     $('.message-box').fadeOut(300).empty()
   }, 5000)
-}
-
-const changePassFailure = function (failureResponse) {
-  $('.message-box').show(100)
-  $('.message-box').html('New password cannot match old password.')
-  $('.message-box').removeClass('success-message')
-  $('.message-box').addClass('error-message')
-  setTimeout(function () {
-    $('.message-box').fadeOut(200).empty()
-  }, 3000)
-}
-
-const signUpSuccess = function (signUpResponse) {
-  $('.message-box').show(100)
-  $('.message-box').html('You\'ve signed up successfully!')
-  $('.sign-up-form').slideUp(200)
-  $('.message-box').removeClass('error-message')
-  $('.message-box').addClass('success-message')
-  setTimeout(function () {
-    $('.message-box').fadeOut(200).empty()
-  }, 3000)
 }
 
 const signInSuccess = function (signInResponse) {
@@ -76,6 +66,16 @@ const changePasswordSuccess = function (changePasswordResponse) {
   $('#change-password-form').slideUp(500)
   setTimeout(function () {
     $('.message-box').fadeOut(300).empty()
+  }, 3000)
+}
+
+const changePassFailure = function (failureResponse) {
+  $('.message-box').show(100)
+  $('.message-box').html('New password cannot match old password.')
+  $('.message-box').removeClass('success-message')
+  $('.message-box').addClass('error-message')
+  setTimeout(function () {
+    $('.message-box').fadeOut(200).empty()
   }, 3000)
 }
 
@@ -121,6 +121,6 @@ module.exports = {
   changePasswordSuccess,
   signOutSuccess,
   changePassFailure,
-  passDoesntMatch
+  passwordsDontMatch
   // signInFailure
 }
