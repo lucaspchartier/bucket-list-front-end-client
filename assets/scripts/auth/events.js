@@ -25,7 +25,7 @@ const onSignIn = function (event) {
 const onChangePassword = function (event) {
   event.preventDefault()
   const userData = getFormFields(event.target)
-  if ($('.old-Pass').val() === $('.new-Pass').val()) {
+  if ($('.old-pass').val() === $('.new-pass').val()) {
     $(event.target).trigger('reset')
     ui.changePassFailure()
   } else {
