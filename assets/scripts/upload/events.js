@@ -6,18 +6,16 @@ const ui = require('./ui.js')
 const onUpload = function (event) {
   event.preventDefault()
   const uploadData = getFormFields(event.target)
-  // console.log((uploadData.images.url).includes('jpg'))
   if (uploadData.item.title === '' || uploadData.item.text === '') {
     $('.upload-message-box').show(100)
-    $('.upload-message-box').html(`Fields cannot be empty `)
-    $('.upload-message-box').removeClass('success-message')
+    $('.upload-message-box').html(`Fields cannot be empty`)
     $('.upload-message-box').addClass('error-message')
+    $('.upload-message-box').removeClass('success-message')
     $(event.target).trigger('reset')
     setTimeout(function () {
       $('.upload-message-box').fadeOut(200).empty(200)
     }, 2500)
   } else {
-    // console.log('this is uploadData', uploadData.images.date)
     $(event.target).trigger('reset')
     api.upload(uploadData.item.title, uploadData.item.text)
       .then(ui.uploadSuccess)
