@@ -24,7 +24,7 @@ $(() => {
   })
 
   $('.sign-up-btn').click(function () {
-    setTimeout(function () {
+    setTimeout(() => {
       $('.sign-up-form').fadeToggle()
       $('.input-field').val('')
     }, 200)
@@ -32,7 +32,7 @@ $(() => {
   })
 
   $('.sign-in-btn').click(function () {
-    setTimeout(function () {
+    setTimeout(() => {
       $('.sign-in-form').fadeToggle()
       $('.input-field').val('')
     }, 200)
@@ -40,7 +40,7 @@ $(() => {
   })
 
   $('.chg-pass-btn').click(function () {
-    setTimeout(function () {
+    setTimeout(() => {
       $('.change-password-form').fadeToggle()
       $('.input-field').val('')
     }, 200)
