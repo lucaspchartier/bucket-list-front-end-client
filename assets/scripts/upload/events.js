@@ -12,9 +12,7 @@ const onUpload = (event) => {
     $('.upload-message-box').addClass('error-message')
     $('.upload-message-box').removeClass('success-message')
     $(event.target).trigger('reset')
-    setTimeout(function () {
-      $('.upload-message-box').fadeOut(200).empty(200)
-    }, 2500)
+    setTimeout(() => $('.upload-message-box').fadeOut(200).empty(200), 2500)
   } else {
     $(event.target).trigger('reset')
     api.upload(uploadData.item.title, uploadData.item.text)
