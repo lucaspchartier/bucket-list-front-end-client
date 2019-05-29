@@ -3,7 +3,7 @@ const api = require('./api.js')
 const ui = require('./ui.js')
 // const store = require('../store.js')
 
-const onUpload = function (event) {
+const onUpload = (event) => {
   event.preventDefault()
   const uploadData = getFormFields(event.target)
   if (uploadData.item.title === '' || uploadData.item.text === '') {
@@ -24,7 +24,7 @@ const onUpload = function (event) {
   }
 }
 
-const onGetAllItems = function (event) {
+const onGetAllItems = (event) => {
   event.preventDefault()
   api.getAllItems()
     .then(ui.getAllItemsSuccess)
@@ -32,21 +32,21 @@ const onGetAllItems = function (event) {
 }
 
 // un crossed off item
-const onGetAllItems2 = function (event) {
+const onGetAllItems2 = (event) => {
   event.preventDefault()
   api.getAllItems()
     .then(ui.getAllItemsSuccess2)
     .catch(ui.failure)
 }
 
-const onGetAllItems3 = function (event) {
+const onGetAllItems3 = (event) => {
   event.preventDefault()
   api.getAllItems()
     .then(ui.getAllItemsSuccess3)
     .catch(ui.failure)
 }
 
-const onTextUpdate = function (event) {
+const onTextUpdate = (event) => {
   event.preventDefault()
   const id = $(event.target).parent('div').data('id')
   const caption = $('.update-text-form-' + event.target.attributes['data-id'].value).val()
@@ -56,7 +56,7 @@ const onTextUpdate = function (event) {
     .catch(ui.failure)
 }
 
-const onTitleUpdate = function (event) {
+const onTitleUpdate = (event) => {
   event.preventDefault()
   const id = $(event.target).parent('div').data('id')
   const title = $('.update-title-form-' + event.target.attributes['data-id'].value).val()
@@ -66,7 +66,7 @@ const onTitleUpdate = function (event) {
     .catch(ui.failure)
 }
 
-const onDeleteItem = function (event) {
+const onDeleteItem = (event) => {
   event.preventDefault()
   const _id = $(event.target).parents('div').data('id')
   api.deleteItemById(_id)
@@ -75,7 +75,7 @@ const onDeleteItem = function (event) {
     .catch(ui.failure)
 }
 
-const onCompleteItem = function (event) {
+const onCompleteItem = (event) => {
   event.preventDefault()
   const _id = $(event.target).parents('div').data('id')
   api.completeItemById(_id)
