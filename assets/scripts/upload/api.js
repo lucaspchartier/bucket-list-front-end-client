@@ -3,7 +3,7 @@
 const store = require('../store.js')
 const config = require('../config.js')
 
-const upload = function (title, text) {
+const upload = (title, text) => {
   return $.ajax({
     method: 'POST',
     url: config.apiUrl + '/items/',
@@ -23,7 +23,7 @@ const upload = function (title, text) {
   })
 }
 
-const textUpdate = function (_id, text) {
+const textUpdate = (_id, text) => {
   return $.ajax({
     method: 'PATCH',
     url: config.apiUrl + `/items/${_id}`,
@@ -41,7 +41,7 @@ const textUpdate = function (_id, text) {
   })
 }
 
-const titleUpdate = function (_id, title) {
+const titleUpdate = (_id, title) => {
   return $.ajax({
     method: 'PATCH',
     url: config.apiUrl + `/items/${_id}`,
@@ -59,7 +59,7 @@ const titleUpdate = function (_id, title) {
   })
 }
 
-const completeItemById = function (_id, title) {
+const completeItemById = (_id, title) => {
   return $.ajax({
     method: 'PATCH',
     url: config.apiUrl + `/items/${_id}`,
@@ -77,7 +77,7 @@ const completeItemById = function (_id, title) {
   })
 }
 
-const getAllItems = function (inputData) {
+const getAllItems = (inputData) => {
   return $.ajax({
     method: 'GET',
     url: config.apiUrl + '/items/',
@@ -89,7 +89,7 @@ const getAllItems = function (inputData) {
   })
 }
 
-const deleteItemById = function (_id) {
+const deleteItemById = (_id) => {
   return $.ajax({
     method: 'DELETE',
     url: config.apiUrl + `/items/${_id}`,
@@ -100,42 +100,11 @@ const deleteItemById = function (_id) {
   })
 }
 
-// const getImageId = function (imageId) {
+// const getImageId = (imageId) => {
 //   return $.ajax({
 //     method: 'GET',
 //     url: config.apiUrl + '/images/' + imageId,
 //     contentType: 'application/json',
-//     headers: {
-//       Authorization: `Token token=${store.user.token}`
-//     }
-//   })
-// }
-
-// const signIn = function (inputData) {
-//   return $.ajax({
-//     method: 'POST',
-//     url: config.apiUrl + '/sign-in/',
-//     contentType: 'application/json',
-//     data: JSON.stringify(inputData)
-//   })
-// }
-//
-// const changePassword = function (inputData) {
-//   return $.ajax({
-//     method: 'PATCH',
-//     url: config.apiUrl + '/change-password/',
-//     contentType: 'application/json',
-//     headers: {
-//       Authorization: `Token token=${store.user.token}`
-//     },
-//     data: JSON.stringify(inputData)
-//   })
-// }
-//
-// const signOut = function (inputData) {
-//   return $.ajax({
-//     method: 'DELETE',
-//     url: config.apiUrl + '/sign-out/',
 //     headers: {
 //       Authorization: `Token token=${store.user.token}`
 //     }
