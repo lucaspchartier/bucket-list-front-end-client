@@ -1,7 +1,7 @@
 const handle = require('../templates/helpers/index.handlebars')
 // const store = require('../store.js')
 
-const failure = function (failureResponse) {
+const failure = (failureResponse) => {
   $('.upload-message-box').show(100)
   $('.upload-message-box').html('Failed, please try again.')
   $('.upload-message-box').addClass('error-message')
@@ -11,7 +11,7 @@ const failure = function (failureResponse) {
   }, 3000)
 }
 
-const idFailure = function (failureResponse) {
+const idFailure = (failureResponse) => {
   $('.upload-message-box').show(100)
   $('.upload-message-box').html('This ID does not exist.')
   $('.upload-message-box').addClass('error-message')
@@ -21,7 +21,7 @@ const idFailure = function (failureResponse) {
   }, 2500)
 }
 
-const uploadSuccess = function (signUpResponse) {
+const uploadSuccess = (signUpResponse) => {
   $('.upload-message-box').show(100)
   $('.upload-message-box').html('Item added successfully!')
   $('.upload-message-box').addClass('success-message')
@@ -31,7 +31,7 @@ const uploadSuccess = function (signUpResponse) {
   }, 3000)
 }
 
-const deleteSuccess = function (deleteResponse) {
+const deleteSuccess = (deleteResponse) => {
   $('.upload-message-box').show(100)
   $('.upload-message-box').html('Item deleted successfully!')
   $('.upload-message-box').addClass('success-message')
@@ -41,7 +41,7 @@ const deleteSuccess = function (deleteResponse) {
   }, 3000)
 }
 
-const getAllItemsSuccess = function (getItemSuccess) {
+const getAllItemsSuccess = (getItemSuccess) => {
   $('.item-wall').empty()
   if (getItemSuccess.items.length === 0) {
     $('.upload-message-box').show(100)
@@ -54,7 +54,7 @@ const getAllItemsSuccess = function (getItemSuccess) {
   } else {
     const index = handle({ items: getItemSuccess.items })
     $('.item-wall').html(index)
-    getItemSuccess.items.forEach(function (x) {
+    getItemSuccess.items.forEach((x) => {
       if (x.completed === false) {
         $('.blah-' + x._id).removeClass('strike')
       } if (x.completed === true) {
@@ -63,12 +63,12 @@ const getAllItemsSuccess = function (getItemSuccess) {
       }
     })
   }
-  $('.xxx').click(function () {
+  $('.xxx').click(() => {
     $('.lala-' + event.target.attributes['data-id'].value).fadeToggle(200)
   })
 }
 
-const getAllItemsSuccess2 = function (getItemSuccess) {
+const getAllItemsSuccess2 = (getItemSuccess) => {
   $('.item-wall').empty()
   if (getItemSuccess.items.length === 0) {
     $('.upload-message-box').show(100)
@@ -82,7 +82,7 @@ const getAllItemsSuccess2 = function (getItemSuccess) {
     const index = handle({ items: getItemSuccess.items })
     $('.item-wall').html(index)
 
-    getItemSuccess.items.forEach(function (x) {
+    getItemSuccess.items.forEach((x) => {
       if (x.completed === false) {
         $('.blah-' + x._id).removeClass('strike')
         $('.item-update-btn-' + x._id).hide()
@@ -93,12 +93,12 @@ const getAllItemsSuccess2 = function (getItemSuccess) {
       }
     })
   }
-  $('.xxx').click(function () {
+  $('.xxx').click(() => {
     $('.lala-' + event.target.attributes['data-id'].value).fadeToggle(200)
   })
 }
 
-const getAllItemsSuccess3 = function (getItemSuccess) {
+const getAllItemsSuccess3 = (getItemSuccess) => {
   $('.item-wall').empty()
   if (getItemSuccess.items.length === 0) {
     $('.upload-message-box').show(100)
@@ -112,7 +112,7 @@ const getAllItemsSuccess3 = function (getItemSuccess) {
     const index = handle({ items: getItemSuccess.items })
     $('.item-wall').html(index)
 
-    getItemSuccess.items.forEach(function (x) {
+    getItemSuccess.items.forEach((x) => {
       if (x.completed === false) {
         $('.haha-' + x._id).hide()
         // $('.blah-' + x._id).removeClass('strike')
@@ -123,11 +123,12 @@ const getAllItemsSuccess3 = function (getItemSuccess) {
       }
     })
   }
-  // $('.xxx').click(function () {
+  // $('.xxx').click(() => {
   //   $('.lala-' + event.target.attributes['data-id'].value).fadeToggle(200)
   // })
 }
-// $('.item-complete-btn').click(function () {
+
+// $('.item-complete-btn').click(() => {
 //   $('.upload-message-box').html('CONGRATS')
 //   $('.upload-message-box').addClass('success-message')
 //   $('.upload-message-box').removeClass('error-message')
@@ -136,7 +137,7 @@ const getAllItemsSuccess3 = function (getItemSuccess) {
 //   }, 5000)
 // })
 
-// const completedItemCross = function (completeSuccess) {
+// const completedItemCross = (completeSuccess) => {
 //   if (completeSuccess.item.completed === true) {
 //     const index2 = handle({ item: completeSuccess.item })
 //     $('.item-wall').html(index2)
