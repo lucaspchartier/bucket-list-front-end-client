@@ -8,9 +8,7 @@ const signUpSuccess = (signUpResponse) => {
   $('.sign-up-form').slideUp(200)
   $('.message-box').addClass('success-message')
   $('.message-box').removeClass('error-message')
-  setTimeout(function () {
-    $('.message-box').fadeOut(200).empty()
-  }, 3000)
+  setTimeout(() => $('.message-box').fadeOut(200).empty(), 3000)
 }
 
 const failure = (failureResponse) => {
@@ -18,9 +16,7 @@ const failure = (failureResponse) => {
   $('.message-box').html('Something went wrong, please try again.')
   $('.message-box').addClass('error-message')
   $('.message-box').removeClass('success-message')
-  setTimeout(function () {
-    $('.message-box').fadeOut(200).empty()
-  }, 3000)
+  setTimeout(() => $('.message-box').fadeOut(200).empty(), 3000)
 }
 
 const passwordsDontMatch = (failureResponse) => {
@@ -28,9 +24,7 @@ const passwordsDontMatch = (failureResponse) => {
   $('.message-box').html('Passwords do not match.')
   $('.message-box').addClass('error-message')
   $('.message-box').removeClass('success-message')
-  setTimeout(function () {
-    $('.message-box').fadeOut(300).empty()
-  }, 5000)
+  setTimeout(() => $('.message-box').fadeOut(200).empty(), 5000)
 }
 
 const signInSuccess = (signInResponse) => {
@@ -53,9 +47,7 @@ const signInSuccess = (signInResponse) => {
   $('.delete-image-btn').show()
   $('.sign-up-btn').hide()
   $('.sign-in-btn').hide()
-  setTimeout(function () {
-    $('.message-box').fadeOut(300).empty()
-  }, 3000)
+  setTimeout(() => $('.message-box').fadeOut(200).empty(), 3000)
 }
 
 const changePasswordSuccess = (changePasswordResponse) => {
@@ -64,9 +56,7 @@ const changePasswordSuccess = (changePasswordResponse) => {
   $('.message-box').addClass('success-message')
   $('.message-box').removeClass('error-message')
   $('#change-password-form').slideUp(500)
-  setTimeout(function () {
-    $('.message-box').fadeOut(300).empty()
-  }, 3000)
+  setTimeout(() => $('.message-box').fadeOut(300).empty(), 3000)
 }
 
 const changePassFailure = (failureResponse) => {
@@ -74,9 +64,7 @@ const changePassFailure = (failureResponse) => {
   $('.message-box').html('New password cannot match old password.')
   $('.message-box').addClass('error-message')
   $('.message-box').removeClass('success-message')
-  setTimeout(function () {
-    $('.message-box').fadeOut(200).empty()
-  }, 3000)
+  setTimeout(() => $('.message-box').fadeOut(200).empty(), 3000)
 }
 
 const signOutSuccess = () => {
@@ -99,9 +87,7 @@ const signOutSuccess = () => {
   $('.sign-up-btn').show()
   $('.sign-in-btn').show()
   $('#change-password-form').trigger('reset')
-  setTimeout(function () {
-    $('.message-box').fadeOut(200).empty()
-  }, 3000)
+  setTimeout(() => $('.message-box').fadeOut(200).empty(), 3000)
 }
 
 // const signInFailure = (failureResponse) => {
@@ -109,9 +95,7 @@ const signOutSuccess = () => {
 //   $('.message-box').html('Email and password do not match, or account doesn\'t exist.')
 //   $('.message-box').addClass('error-message')
 //   $('.message-box').removeClass('success-message')
-//   setTimeout(function () {
-//     $('.message-box').fadeOut(200).empty()
-//   }, 3000)
+//   setTimeout(() => $('.message-box').fadeOut(200).empty(), 3000)
 // }
 
 module.exports = {

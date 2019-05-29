@@ -6,9 +6,7 @@ const failure = (failureResponse) => {
   $('.upload-message-box').html('Failed, please try again.')
   $('.upload-message-box').addClass('error-message')
   $('.upload-message-box').removeClass('success-message')
-  setTimeout(function () {
-    $('.upload-message-box').fadeOut(200).empty(200)
-  }, 3000)
+  setTimeout(() => $('.message-box').fadeOut(200).empty(), 3000)
 }
 
 const idFailure = (failureResponse) => {
@@ -16,9 +14,7 @@ const idFailure = (failureResponse) => {
   $('.upload-message-box').html('This ID does not exist.')
   $('.upload-message-box').addClass('error-message')
   $('.upload-message-box').removeClass('success-message')
-  setTimeout(function () {
-    $('.upload-message-box').fadeOut(200).empty(200)
-  }, 2500)
+  setTimeout(() => $('.upload-message-box').fadeOut(200).empty(200), 2500)
 }
 
 const uploadSuccess = (signUpResponse) => {
@@ -26,9 +22,7 @@ const uploadSuccess = (signUpResponse) => {
   $('.upload-message-box').html('Item added successfully!')
   $('.upload-message-box').addClass('success-message')
   $('.upload-message-box').removeClass('error-message')
-  setTimeout(function () {
-    $('.upload-message-box').fadeOut(200).empty(200)
-  }, 3000)
+  setTimeout(() => $('.upload-message-box').fadeOut(200).empty(200), 3000)
 }
 
 const deleteSuccess = (deleteResponse) => {
@@ -36,9 +30,7 @@ const deleteSuccess = (deleteResponse) => {
   $('.upload-message-box').html('Item deleted successfully!')
   $('.upload-message-box').addClass('success-message')
   $('.upload-message-box').removeClass('error-message')
-  setTimeout(function () {
-    $('.upload-message-box').fadeOut(200).empty(200)
-  }, 3000)
+  setTimeout(() => $('.upload-message-box').fadeOut(200).empty(200), 3000)
 }
 
 const getAllItemsSuccess = (getItemSuccess) => {
@@ -48,9 +40,7 @@ const getAllItemsSuccess = (getItemSuccess) => {
     $('.upload-message-box').html('Your account currently has no dreams.')
     $('.upload-message-box').addClass('error-message')
     $('.upload-message-box').removeClass('success-message')
-    setTimeout(function () {
-      $('.upload-message-box').fadeOut(200).empty(200)
-    }, 5000)
+    setTimeout(() => $('.upload-message-box').fadeOut(200).empty(200), 5000)
   } else {
     const index = handle({ items: getItemSuccess.items })
     $('.item-wall').html(index)
@@ -75,9 +65,7 @@ const getAllItemsSuccess2 = (getItemSuccess) => {
     $('.upload-message-box').html(`Your Account Has No More Dreams`)
     $('.upload-message-box').addClass('error-message')
     $('.upload-message-box').removeClass('success-message')
-    setTimeout(function () {
-      $('.upload-message-box').fadeOut(200).empty(200)
-    }, 5000)
+    setTimeout(() => $('.upload-message-box').fadeOut(200).empty(200), 5000)
   } else {
     const index = handle({ items: getItemSuccess.items })
     $('.item-wall').html(index)
@@ -105,9 +93,7 @@ const getAllItemsSuccess3 = (getItemSuccess) => {
     $('.upload-message-box').html(`Your Account Has No More Dreams`)
     $('.upload-message-box').addClass('error-message')
     $('.upload-message-box').removeClass('success-message')
-    setTimeout(function () {
-      $('.upload-message-box').fadeOut(200).empty(200)
-    }, 5000)
+    setTimeout(() => $('.upload-message-box').fadeOut(200).empty(200), 5000)
   } else {
     const index = handle({ items: getItemSuccess.items })
     $('.item-wall').html(index)
@@ -132,9 +118,7 @@ const getAllItemsSuccess3 = (getItemSuccess) => {
 //   $('.upload-message-box').html('CONGRATS')
 //   $('.upload-message-box').addClass('success-message')
 //   $('.upload-message-box').removeClass('error-message')
-//   setTimeout(function () {
-//     $('.upload-message-box').fadeOut(200).empty(200)
-//   }, 5000)
+//   setTimeout(() => $('.upload-message-box').fadeOut(200).empty(200), 5000)
 // })
 
 // const completedItemCross = (completeSuccess) => {
