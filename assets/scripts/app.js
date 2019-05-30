@@ -9,11 +9,11 @@ $(() => {
   // Upload events
   uploadEvents.addHandlers()
   // Form toggles
-  $('.navbar-toggler').click(function () {
+  $('.navbar-toggler').click(() => {
     $('.input-field').val('')
   })
 
-  $('.sign-up-btn').click(function () {
+  $('.sign-up-btn').click(() => {
     setTimeout(() => {
       $('.sign-up-form').fadeToggle()
       $('.input-field').val('')
@@ -21,7 +21,7 @@ $(() => {
     $('.sign-in-form').fadeOut(200)
   })
 
-  $('.sign-in-btn').click(function () {
+  $('.sign-in-btn').click(() => {
     setTimeout(() => {
       $('.sign-in-form').fadeToggle()
       $('.input-field').val('')
@@ -29,7 +29,7 @@ $(() => {
     $('.sign-up-form').fadeOut(200)
   })
 
-  $('.chg-pass-btn').click(function () {
+  $('.chg-pass-btn').click(() => {
     setTimeout(() => {
       $('.change-password-form').fadeToggle()
       $('.input-field').val('')
@@ -37,7 +37,7 @@ $(() => {
     $('.get-image-by-id-form').fadeOut(200)
   })
 
-  $('.get-all-item-btn').click(function () {
+  $('.get-all-item-btn').click(() => {
     $('.change-password-form').fadeOut(200)
   })
 })
