@@ -82,6 +82,18 @@ const onCompleteItem = (event) => {
     .catch(ui.failure)
 }
 
+const addHandlers = () => {
+  $('.upload-area').on('submit', onUpload)
+  $('.get-all-item-btn').on('click', onGetAllItems)
+  $('.get-incomplete-item-btn').on('click', onGetAllItems2)
+  $('.get-completed-item-btn').on('click', onGetAllItems3)
+  $('.item-wall').on('submit', '.text-update', onTextUpdate)
+  $('.item-wall').on('submit', '.title-update', onTitleUpdate)
+  $('.item-wall').on('click', '.zzz', onDeleteItem)
+  $('.item-wall').on('click', '.yyy', onCompleteItem)
+  // $('.item-wall').on('click', '.item-update-btn', onGetAllItems)
+}
+
 module.exports = {
   onUpload,
   onGetAllItems,
@@ -90,5 +102,6 @@ module.exports = {
   onDeleteItem,
   onCompleteItem,
   onTextUpdate,
-  onTitleUpdate
+  onTitleUpdate,
+  addHandlers
 }
