@@ -1,0 +1,203 @@
+body {
+  background-position: center;
+  background-size: 40%;
+  background-repeat: no-repeat;
+  background-attachment: fixed;
+  background-color: $background;
+}
+.hidden {
+  display: none;
+}
+
+.block {
+  display: block;
+}
+
+.strike {
+  text-decoration: line-through;
+}
+
+.success-message {
+  color: $success-message;
+}
+
+.error-message {
+  color: $error-message;
+}
+
+button:focus {
+  outline: none;
+}
+
+.btn-outline-warning:focus {
+  outline: none;
+  background-color: transparent;
+}
+
+.btn-outline-warning:hover,
+.btn-outline-warning::after,
+.btn-outline-warning:not(:disabled):not(.disabled):active,
+.btn-outline-warning:active,
+.btn-outline-warning:visited {
+  box-shadow: none !important;
+  outline: 0 none;
+  background-color: rgba(131,173,181,0.3);
+  color: $hover;
+  border-color: $hover;
+}
+
+input:focus,
+select:focus,
+textarea:focus {
+  outline: none;
+  background-color: rgba(131,173,181,0.3);
+}
+
+.navbar,
+.user-panel {
+  background-color: $navbar;
+  legend {
+    color: $user-panel;
+    margin: 5px;
+  }
+}
+
+.user-panel {
+  display: inline-block;
+  text-align: right;
+  width: 100%;
+}
+
+.input-field {
+    background-color: transparent;
+    color: $user-panel;
+    // border-radius: 5px;
+    border-top: none;
+    border-left: none;
+    border-right: none;
+  }
+
+.form-btn {
+    background-color: $form;
+    height: 30px;
+    border: none;
+    // border-style: groove;
+    border-color: $user-panel;
+    border-radius: 5px;
+    color: $user-panel;
+    text-align: center;
+    text-decoration: none;
+  }
+
+  .item-btn {
+    font-size: 14px;
+    background-color: $form;
+    height: 25px;
+    border: none;
+    // border-style: groove;
+    border-color: $user-panel;
+    border-radius: 5px;
+    color: $user-panel;
+    text-align: center;
+    text-decoration: none;
+    margin: 0 5px 0 5px;
+  }
+
+.sign-in-btn,
+.sign-up-btn,
+.sign-out-btn,
+.chg-pass-btn,
+.get-all-item-btn,
+.get-completed-item-btn,
+.get-incomplete-item-btn {
+  border-color: $button;
+  color: $button;
+}
+
+.sign-out-btn,
+.chg-pass-btn,
+.get-all-item-btn,
+.delete-image-btn,
+.delete-image-form,
+.sign-in-form,
+.sign-up-form,
+.change-password-form,
+.get-completed-item-btn,
+.get-incomplete-item-btn {
+  display: none;
+}
+
+.site-name {
+  font-family: 'Arvo', serif;
+}
+
+.upload-section,
+.item-wall {
+  width: 65%;
+  margin: 0 auto;
+  text-align: center;
+}
+
+.upload-area {
+  margin-top: 10px;
+}
+
+.message-box {
+  margin-top: 10px;
+}
+
+.disclaimer {
+    font-size: 16px;
+    margin-top: 10px;
+    // margin-bottom: 20px;
+    color: $disclaimer;
+  }
+
+  .card {
+    background-color: $disclaimer;
+  }
+
+  .list-title {
+    font-size: 18px;
+    text-transform: uppercase;
+  }
+
+  .list-text {
+    font-size: 16px;
+  }
+
+  .lala- {
+    display: inline-block;
+    width: 100%;
+    margin-bottom: 10px;
+  }
+
+  .title-update,
+  .text-update {
+    width: 50%;
+    margin: 5px auto 15px auto;
+  }
+
+  .btn-group {
+    margin-bottom: 5px;
+  }
+
+  .upload-message-box {
+    width: 100%;
+    position: relative;
+    text-align: center;
+    margin: 0 auto;
+  }
+
+  .logo {
+    width: 100%;
+    text-align: center;
+    margin: 0 auto;
+  }
+
+  .bucket-logo {
+    text-align: center;
+    margin: 0 auto;
+    width: 650px;
+    height: 650px;
+  }
