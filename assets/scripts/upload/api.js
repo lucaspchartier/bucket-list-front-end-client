@@ -77,7 +77,7 @@ const completeItemById = (_id, title) => {
   })
 }
 
-const getAllItems = (inputData) => {
+const getAllItems = inputData => {
   return $.ajax({
     method: 'GET',
     url: config.apiUrl + '/items/',
@@ -89,7 +89,7 @@ const getAllItems = (inputData) => {
   })
 }
 
-const deleteItemById = (_id) => {
+const deleteItemById = _id => {
   return $.ajax({
     method: 'DELETE',
     url: config.apiUrl + `/items/${_id}`,
@@ -100,7 +100,7 @@ const deleteItemById = (_id) => {
   })
 }
 
-// const getImageId = (imageId) => {
+// const getImageId = imageId => {
 //   return $.ajax({
 //     method: 'GET',
 //     url: config.apiUrl + '/images/' + imageId,
