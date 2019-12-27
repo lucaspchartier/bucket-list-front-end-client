@@ -4,9 +4,9 @@
 Once a user signs up and signs in, the user is able to create a bucket list item, along with a description that details what the user wants to do eventually in their lifetime (i.e. visit Hawaii, climb Mt. Kilimanjaro, etc.) The user can also show and list a single or all of their items, and update a particular entry. In addition, the user can even check an item off their bucket list once they accomplish that item in their bucket list and delete any particular item at any time they choose.
 
 ### Links
-- Back End Repository: https://github.com/lucaspchartier/bucket-list-back-end-api
-- Deployed Client: https://lucaspchartier.github.io/bucket-list-front-end-client
-- Deployed API: https://morning-tor-51744.herokuapp.com
+* [Bucket List API](https://github.com/lucaspchartier/bucket-list-back-end-api)
+* [Deployed Client](https://lucaspchartier.github.io/bucket-list-front-end-client)
+* [Deployed API](https://morning-tor-51744.herokuapp.com)
 
 ### Wireframes
 ![Wireframes](https://i.imgur.com/7THkF3o.jpg)
