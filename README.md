@@ -16,11 +16,8 @@ Once a user signs up and signs in, the user is able to create a bucket list item
 * CSS
 * JavaScript
 * jQuery
-* Express
-* Mongoose
-* Mongodb
-* Ajax
 * Handlebars
+* Ajax
 
 ### User Stories
 * As an unregistered user, I would like to sign up with email and password.
