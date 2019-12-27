@@ -4,7 +4,7 @@ const getFormFields = require('../../../lib/get-form-fields.js')
 const api = require('./api.js')
 const ui = require('./ui.js')
 
-const onSignUp = (event) => {
+const onSignUp = event => {
   event.preventDefault()
   const userData = getFormFields(event.target)
   if ($('.pass').val() !== $('.confirm-pass').val()) {
@@ -18,7 +18,7 @@ const onSignUp = (event) => {
   }
 }
 
-const onSignIn = (event) => {
+const onSignIn = event => {
   event.preventDefault()
   const userData = getFormFields(event.target)
   $(event.target).trigger('reset')
@@ -27,7 +27,7 @@ const onSignIn = (event) => {
     .catch(ui.failure)
 }
 
-const onChangePassword = (event) => {
+const onChangePassword = event => {
   event.preventDefault()
   const userData = getFormFields(event.target)
   if ($('.old-pass').val() === $('.new-pass').val()) {
@@ -41,7 +41,7 @@ const onChangePassword = (event) => {
   }
 }
 
-const onSignOut = (event) => {
+const onSignOut = event => {
   event.preventDefault()
   api.signOut()
     .then(ui.signOutSuccess)
