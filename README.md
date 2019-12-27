@@ -11,14 +11,6 @@ Once a user signs up and signs in, the user is able to create a bucket list item
 ### Wireframes
 ![Wireframes](https://i.imgur.com/7THkF3o.jpg)
 
-### List of technologies used
-* HTML
-* CSS
-* JavaScript
-* jQuery
-* Handlebars
-* Ajax
-
 ### User Stories
 * As an unregistered user, I would like to sign up with email and password.
 * As a registered user, I would like to sign in with email and password.
@@ -28,6 +20,14 @@ Once a user signs up and signs in, the user is able to create a bucket list item
 * As a signed in user, I would like to update my bucket list item's title and description.
 * As a signed in user, I would like to delete my bucket list item.
 * As a signed in user, I would like to see all my bucket list items but not other users'.
+
+### List of technologies used
+* HTML
+* CSS
+* JavaScript
+* jQuery
+* Handlebars
+* Ajax
 
 ### Unsolved problems
 As of right now, we don't really have major unsolved problems that are in our way. The app works fine and all auth and item actions do not return any errors. In terms of future plans, I myself eventually want to implement a Google location API so that the user can add the location of specific items that they plan on adding to their bucket list.
