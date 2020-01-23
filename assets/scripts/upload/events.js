@@ -31,7 +31,7 @@ const onGetAllItems = event => {
     .catch(ui.failure)
 }
 
-// un crossed off item
+// uncrossed off item
 const onGetAllItems2 = event => {
   event.preventDefault()
   api.getAllItems()

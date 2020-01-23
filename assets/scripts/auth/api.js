@@ -28,7 +28,6 @@ const changePassword = inputData => {
     headers: {
       Authorization: `Token token=${store.user.token}`
     },
-    // Authorization: 'Token token=' + store.user.token
     contentType: 'application/json',
     data: JSON.stringify(inputData)
   })

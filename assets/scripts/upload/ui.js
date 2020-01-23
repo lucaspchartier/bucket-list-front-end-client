@@ -46,7 +46,7 @@ const getAllItemsSuccess = getItemSuccess => {
   } else {
     const index = handle({ items: getItemSuccess.items })
     $('.item-wall').html(index)
-    getItemSuccess.items.forEach((x) => {
+    getItemSuccess.items.forEach(x => {
       if (x.completed === false) {
         $('.blah-' + x._id).removeClass('strike')
       } if (x.completed === true) {
@@ -71,7 +71,7 @@ const getAllItemsSuccess2 = getItemSuccess => {
   } else {
     const index = handle({ items: getItemSuccess.items })
     $('.item-wall').html(index)
-    getItemSuccess.items.forEach((x) => {
+    getItemSuccess.items.forEach(x => {
       if (x.completed === false) {
         $('.blah-' + x._id).removeClass('strike')
         $('.item-update-btn-' + x._id).hide()
@@ -98,7 +98,7 @@ const getAllItemsSuccess3 = getItemSuccess => {
   } else {
     const index = handle({ items: getItemSuccess.items })
     $('.item-wall').html(index)
-    getItemSuccess.items.forEach((x) => {
+    getItemSuccess.items.forEach(x => {
       if (x.completed === false) {
         $('.haha-' + x._id).hide()
         // $('.blah-' + x._id).removeClass('strike')
@@ -121,7 +121,7 @@ const getAllItemsSuccess3 = getItemSuccess => {
 //   setTimeout(() => $('.upload-message-box').fadeOut(200).empty(200), 5000)
 // })
 
-// const completedItemCross = (completeSuccess) => {
+// const completedItemCross = completeSuccess => {
 //   if (completeSuccess.item.completed === true) {
 //     const index2 = handle({ item: completeSuccess.item })
 //     $('.item-wall').html(index2)
